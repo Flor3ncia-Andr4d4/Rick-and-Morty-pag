@@ -1,0 +1,180 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Colocar los elementos en los extremos del header */
+  align-items: center; /* Centrar verticalmente los elementos */
+  background-color: #007a99;
+  color: #fff;
+  padding: 10px;
+}
+
+.header-left h1 {
+  margin: 0; /* Eliminamos el margen por defecto del h1 */
+}
+
+.header-right {
+  display: flex;
+}
+
+main {
+  padding: 20px;
+}
+
+#characters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.character-card {
+  border: 1px solid #266563;
+  padding: 10px;
+}
+
+.character-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #ccc;
+}
+.navegador {
+  background-color: rgb(74, 130, 132);
+}
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Misma cantidad que en la imagen para mantener la coherencia */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease-in-out; /* Transición suave para efecto de sombra */
+}
+
+.character-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.character-card img:hover {
+  transform: rotateY(
+    180deg
+  ); /* Rotación de 180 grados en el eje Y al pasar el cursor sobre la imagen */
+}
+
+footer {
+  background-color: #337086;
+  color: #fff;
+  padding: 30px;
+  text-align: left;
+}
+
+footer p {
+  font-weight: bold;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Estilos para los botones de género */
+.gender-button {
+  background-color: #007a99; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo puntero */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 5px; /* Margen entre botones */
+  transition: background-color 0.3s ease-in-out; /* Transición suave al cambiar el color de fondo */
+}
+
+.gender-button:hover {
+  background-color: #2c712f; /* Color de fondo al pasar el cursor sobre el botón */
+}
+
+/* Estilos para los botones de paginación */
+.pagination-button {
+  background-color: #008cba; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 8px 16px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo puntero */
+  font-size: 14px; /* Tamaño de fuente */
+  margin: 5px; /* Margen entre botones */
+  transition: background-color 0.3s ease-in-out; /* Transición suave al cambiar el color de fondo */
+}
+
+.pagination-button:hover {
+  background-color: #007a99; /* Color de fondo al pasar el cursor sobre el botón */
+}
+
+/* Estilo para botones de "Primera" y "Última" */
+.pagination-button:first-child:disabled,
+.pagination-button:last-child:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilos para el elemento que muestra el total de personajes */
+#total-characters {
+  margin: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Estilos para el elemento que muestra información de paginación */
+#pagination-info {
+  margin: 10px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.view-more-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #0e760c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #0056b3;
+}

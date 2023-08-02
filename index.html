@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <h1>Rick and Morty</h1>
+      </div>
+      <div class="header-right">
+        <button class="gender-button" data-gender="all">Todos</button>
+        <button class="gender-button" data-gender="female">Mujeres</button>
+        <button class="gender-button" data-gender="male">Hombres</button>
+      </div>
+    </header>
+    <p id="total-characters">
+      Total de personajes: <span id="total-count"></span>
+    </p>
+    <main>
+      <div id="characters-container">
+        <!-- Aquí se mostrará la lista de personajes -->
+      </div>
+      <div id="pagination">
+        <!-- Aquí se agregarán los botones de paginación -->
+      </div>
+      <div id="pagination-info">
+        Página actual:
+        <span id="current-page"></span>
+        <br />
+        <br />
+        Total de paginas:
+        <span id="total-pages"></span>
+      </div>
+    </main>
+    <footer>
+      <p>FOOTER</p>
+      <p>© 2023 Florencia Andrada</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
